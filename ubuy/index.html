@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    
+    <div class="tab-box">
+      <button class="tab-btn active" onclick="showForm('loginForm')">Login</button>
+      <button class="tab-btn" onclick="showForm('registerForm')">Register</button>
+    </div>
+
+    
+    <form id="loginForm" class="form active">
+      <h2>Login</h2>
+      <div class="toggle-section">
+        <label><input type="radio" name="loginType" value="password" checked onclick="toggleLogin('password')"> Password</label>
+        <label><input type="radio" name="loginType" value="otp" onclick="toggleLogin('otp')"> OTP</label>
+      </div>
+
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group" id="passwordField">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <span class="toggle" onclick="togglePassword('password')">👁</span>
+      </div>
+
+      <div class="input-group hidden" id="otpField">
+        <label>OTP</label>
+        <input type="text" placeholder="Enter OTP">
+      </div>
+
+      <a href="#" class="forgot">Forgot Your Password?</a>
+      <button type="submit" class="btn">Login</button>
+
+      <p class="social-text">Or login with</p>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      </div>
+    </form>
+
+    
+    <form id="registerForm" class="form">
+  <h2>Register</h2>
+  <div class="toggle-section">
+    <label><input type="radio" name="regType" value="password" checked onclick="toggleRegister('password')"> Password</label>
+    <label><input type="radio" name="regType" value="otp" onclick="toggleRegister('otp')"> OTP</label>
+  </div>
+
+  <div class="input-group">
+    <label>Email Address</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+  </div>
+
+  <div id="regPasswordFields">
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="regPassword" placeholder="Enter password">
+      <span class="toggle" onclick="togglePassword('regPassword')">👁</span>
+    </div>
+
+    <div class="input-group">
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm password">
+      <span class="toggle" onclick="togglePassword('confirmPassword')">👁</span>
+    </div>
+  </div>
+
+  <div class="input-group hidden" id="regOtpField">
+    <label>OTP</label>
+    <input type="text" placeholder="Enter OTP">
+  </div>
+
+  <div class="g-recaptcha" data-sitekey="6LfH5LgrAAAAAC24WQ1ZJDdP9otFGJujEYlPKN0c"></div>
+  <br>
+
+  <button type="submit" class="btn">Register</button>
+
+  
+  <p class="disclaimer">
+    By registering, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+  </p>
+
+  <p class="social-text">Or register with</p>
+  <div class="social-icons">
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+  </div>
+</form>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  </div>
+</body>
+</html>
